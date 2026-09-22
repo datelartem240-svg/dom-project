@@ -83,6 +83,7 @@ export default defineNuxtConfig({
       { code: "en-US", iso: "en-US", file: "en-US.json" },
       { code: "fr-FR", iso: "fr-FR", file: "fr-FR.json" },
       { code: "ar-AR", iso: "ar-AR", file: "ar-AR.json" },
+      { code: "ru-RU", iso: "ru-RU", file: "ru-RU.json" }
     ],
     detectBrowserLanguage: {
       useCookie: true,
@@ -110,11 +111,13 @@ export default defineNuxtConfig({
             fr: "Nécessaire",
             en: "Necessary",
             ar: "ضروري",
+            ru: "Необходимые"
           },
           description: {
             fr: "Nécessaire",
             en: "Necessary",
             ar: "ضروري",
+            ru: "Необходимые"
           },
           isPreselected: true,
           id: "necessary",
@@ -122,6 +125,6 @@ export default defineNuxtConfig({
       ],
       optional: [],
     },
-    locales: ["en", "fr", "ar"],
+    locales: ["en", "fr", "ar", "ru"],
   },
 });

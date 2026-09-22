@@ -52,11 +52,17 @@ const { t } = useI18n();
         <Icon name="logos:nuxt-icon" size="42" />
         <div>
           <div class="flex flex-col gap-2 text-center">
+          
+
+
             <div
               class="items-center text-lg font-bold text-gray-500 dark:text-gray-300"
             >
               {{ $t("pages.index.hero.subtitle") }}
             </div>
+
+
+
             <div class="text-3xl font-bold dark:text-white">
               {{ $t("pages.index.hero.title") }}
             </div>

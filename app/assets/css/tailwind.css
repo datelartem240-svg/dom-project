@@ -16,5 +16,5 @@ html {
   @apply bg-white;
 }
 html.dark {
-  @apply bg-slate-900;
+  @apply bg-[#17212b];
 }

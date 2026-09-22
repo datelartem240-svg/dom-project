@@ -3,7 +3,8 @@
     "dir": "rtl",
     "en-US": "English",
     "fr-FR": "Français",
-    "ar-AR": "العربية"
+    "ar-AR": "العربية", 
+    "ru-RU": "Русский"
   },
   "site": {
     "name": "قالب Nuxt"
