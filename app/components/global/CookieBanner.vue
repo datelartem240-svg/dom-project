@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n' 
+import { useI18n } from 'vue-i18n'
 const { locale, t} = useI18n();
 type LocaleCode = typeof locale.value extends `${infer Code}-${string}`
   ? Code

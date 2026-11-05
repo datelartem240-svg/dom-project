@@ -1,0 +1,76 @@
+{
+  "locale": {
+    "dir": "rtl",
+    "en-US": "English",
+    "fr-FR": "Français",
+    "ar-AR": "العربية", 
+    "ru-RU": "Русский"
+  },
+  "site": {
+    "name": "قالب Nuxt"
+  },
+  "themes": {
+    "system": "النظام",
+    "light": "فاتح",
+    "dark": "داكن"
+  },
+  "cookies": {
+    "bar": {
+      "title": "🍪 مرحبًا. يستخدم هذا الموقع ملفات تعريف الارتباط",
+      "description": "نستخدم ملفات تعريف الارتباط وتقنيات مماثلة للمساعدة في تخصيص المحتوى وتقديم تجربة أفضل. يمكنك اختيار تخصيصها عن طريق النقر فوق زر التخصيص."
+    },
+    "modal": {
+      "title": "تخصيص",
+      "description": "نستخدم أنواعًا مختلفة من ملفات تعريف الارتباط لتحسين تجربتك على موقعنا على الويب. انقر على الفئات أدناه لمعرفة المزيد عن أهدافها. يمكنك اختيار أنواع ملفات تعريف الارتباط المسموح بها ويمكنك تغيير تفضيلاتك لاحقًا. تذكر أن تعطيل ملفات تعريف الارتباط قد يؤثر على تجربتك.",
+      "privacy-policy": "سياسة الخصوصية"
+    },
+    "necessary": {
+      "title": "ملفات تعريف الارتباط الضرورية",
+      "description": "هذه ملفات ضرورية للعمل الصحيح لموقع الويب. بدون هذه الملفات، لن يعمل الموقع بشكل صحيح"
+    }
+  },
+  "error": {
+    "return": "العودة",
+    "page-not-found": "الصفحة غير موجودة"
+  },
+  "pages": {
+    "index": {
+      "meta": {
+        "title": "الصفحة الرئيسية",
+        "description": "الصفحة الرئيسية"
+      },
+      "link": "الرئيسية",
+      "hero": {
+        "title": "قالب Nuxt",
+        "subtitle": "غير رسمي",
+        "description": "مجموعة جاهزة للاستخدام لجميع أنواع المشاريع"
+      },
+      "features": {
+        "googleFonts": "خطوط جوجل",
+        "eslint": "ESLint",
+        "Typescript": "Typescript",
+        "Prettier": "Prettier",
+        "imageOptim": "تحسين الصور",
+        "TailwindCSS": "TailwindCSS",
+        "darkMode": "الوضع الداكن",
+        "i18n": "التوطين (i18n)",
+        "postcss": "PostCSS",
+        "lightHouse": " نتيجة 100% على Lighthouse ",
+        "deviceDetect": "اكتشاف الأجهزة",
+        "cookies": "شريط ملفات تعريف الارتباط",
+        "Iconify": "Iconify",
+        "Pinia": "Pinia",
+        "enterprise": "جاهز للمشاريع"
+      }
+    },
+    "minimal": {
+      "meta": {
+        "title": "الحد الأدنى من الصفحة (تخطيط ملء الشاشة)",
+        "description": "الحد الأدنى من الصفحة باستخدام تخطيط ملء الشاشة"
+      },
+      "link": "الحد الأدنى",
+      "title": "الحد الأدنى من الصفحة (تخطيط ملء الشاشة)",
+      "p": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque iste atque, hic porro officiis fugit quae deserunt nobis dolorum odit dignissimos consequatur esse maiores repellat impedit. Quae dolorum id rem?"
+    }
+  }
+}
