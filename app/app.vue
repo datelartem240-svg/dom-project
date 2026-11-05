@@ -1,26 +1,31 @@
 <script setup lang="ts">
 import { ref, computed, nextTick, onMounted } from 'vue'
-
 import { useI18n } from 'vue-i18n' 
+
 const { locale, t } = useI18n()
 
 const isLoading = ref(true)
 const password = ref('')
 const secret_key = 'begompodstol123'
 
+// 1. Добавляем флаг, чтобы знать, загрузились ли мы в браузере
+const isClient = ref(false)
+
+// 2. Логика разблокировки: на сервере всегда false, в браузере - по паролю
 const isUnlocked = computed(() => {
+  // Если мы на сервере (пререндеринг), всегда возвращаем false (или true, если хотите пререндерить сайт)
+  if (!isClient.value) return false 
   return password.value === secret_key
 })
 
-if (import.meta.client) {
+onMounted(() => {
+  isClient.value = true // Теперь мы в браузере
+  
   const storedLanguage = localStorage.getItem('nuxt-lang')
-
   if (storedLanguage && storedLanguage !== 'en-US') {
     locale.value = storedLanguage
   }
-}
-
-onMounted(() => {
+  
   nextTick(() => {
     isLoading.value = false
   })
@@ -33,7 +38,6 @@ useHead({
       return t('locale.dir') as 'ltr' | 'rtl' | 'auto'
     }),
   },
-
   titleTemplate: function(title) {
     return title
       ? `${title} - ${t('site.name')}`
