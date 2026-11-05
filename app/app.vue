@@ -29,16 +29,13 @@ onMounted(() => {
 useHead({
   htmlAttrs: {
     lang: locale,
-    dir: computed(() => {
-      return t('locale.dir') as 'ltr' | 'rtl' | 'auto'
-    }),
+    dir: computed(() => t('locale.dir') as 'ltr' | 'rtl' | 'auto'),
   },
-
-  titleTemplate: function(title) {
-    return title
-      ? `${title} - ${t('site.name')}`
-      : t('site.name')
-  },
+  titleTemplate: computed(() => {
+    return (title: string | undefined) => {
+      return title ? `${title} - ${t('site.name')}` : t('site.name')
+    }
+  }),
 })
 </script>
 
