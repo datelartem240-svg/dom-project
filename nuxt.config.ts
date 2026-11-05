@@ -45,7 +45,7 @@ export default defineNuxtConfig({
 
   app: {
     baseURL: '/dom-project/', 
-    buildAssetsDir: 'assets', 
+    buildAssetsDir: '/_nuxt/', 
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
@@ -76,22 +76,24 @@ export default defineNuxtConfig({
     preconnect: true,
   },
 
-  i18n: {
-    baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "http://localhost:3000",
-    defaultLocale: "en-US",
-    langDir: "./locales",
-    strategy: "no_prefix",
+   i18n: {
+    restructureDir: '.',
+    defaultLocale: 'en-US',
+    langDir: 'locales',
+    strategy: 'no_prefix',
+
     locales: [
-      { code: "en-US", iso: "en-US", file: "en-US.json" },
-      { code: "fr-FR", iso: "fr-FR", file: "fr-FR.json" },
-      { code: "ar-AR", iso: "ar-AR", file: "ar-AR.json" },
-      { code: "ru-RU", iso: "ru-RU", file: "ru-RU.json" }
+      { code: 'en-US', language: 'en-US', file: 'en-US.json' },
+      { code: 'fr-FR', language: 'fr-FR', file: 'fr-FR.json' },
+      { code: 'ar-AR', language: 'ar-AR', file: 'ar-AR.json' },
+      { code: 'ru-RU', language: 'ru-RU', file: 'ru-RU.json' }
     ],
+
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: "nuxt-lang",
-      redirectOn: "root",
-    },
+      cookieKey: 'nuxt-lang',
+      redirectOn: 'root'
+    }
   },
 
   cookieControl: {
