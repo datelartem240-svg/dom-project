@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   //ssr:false,
   compatibilityDate: "2025-07-15",
+  experimental: {
+    payloadExtraction: false,
+  },
   devtools: { enabled: true },
   runtimeConfig: {
     public: {
