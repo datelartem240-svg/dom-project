@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n() 
 defineProps({ error: { type: Object, default: null } });
 </script>
 <template>
@@ -11,7 +13,7 @@ defineProps({ error: { type: Object, default: null } });
       </p>
       <h1 class="text-xl font-medium">
         <template v-if="error.statusCode == 404">
-          {{ $t("error.page-not-found") }}
+          {{ t("error.page-not-found") }}
         </template>
         <template v-else>
           {{ error.message }}
@@ -22,7 +24,7 @@ defineProps({ error: { type: Object, default: null } });
         @click="clearError({ redirect: '/' })"
       >
         <Icon name="ph:arrow-left-bold" />
-        {{ $t("error.return") }}
+        {{ t("error.return") }}
       </button>
     </div>
   </div>

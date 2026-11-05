@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n' 
 const { locale, t, availableLocales, setLocale } = useI18n();
 const isOpen = ref(false);
 const dropdownRef = ref<HTMLElement | null>(null);

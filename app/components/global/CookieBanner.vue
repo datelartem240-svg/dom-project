@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { locale } = useI18n();
+import { useI18n } from 'vue-i18n' 
+const { locale, t} = useI18n();
 type LocaleCode = typeof locale.value extends `${infer Code}-${string}`
   ? Code
   : never;
@@ -33,15 +34,15 @@ watch(
   <div>
     <CookieControl :locale="currentLocale">
       <template #bar>
-        <h3>{{ $t("cookies.bar.title") }}</h3>
-        <p>{{ $t("cookies.bar.description") }}</p>
+        <h3>{{ t("cookies.bar.title") }}</h3>
+        <p>{{ t("cookies.bar.description") }}</p>
       </template>
       <template #modal>
-        <h3>{{ $t("cookies.modal.title") }}</h3>
+        <h3>{{ t("cookies.modal.title") }}</h3>
         <p>
-          {{ $t("cookies.modal.description") }}
+          {{ t("cookies.modal.description") }}
           <NuxtLink to="/privacy-policy">{{
-            $t("cookies.modal.privacy-policy")
+            t("cookies.modal.privacy-policy")
           }}</NuxtLink>
         </p>
       </template>

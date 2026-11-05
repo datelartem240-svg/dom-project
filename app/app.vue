@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, nextTick, onMounted } from 'vue'
 
+import { useI18n } from 'vue-i18n' 
 const { locale, t } = useI18n()
 
 const isLoading = ref(true)
@@ -33,7 +34,7 @@ useHead({
     }),
   },
 
-  titleTemplate(title) {
+  titleTemplate: function(title) {
     return title
       ? `${title} - ${t('site.name')}`
       : t('site.name')

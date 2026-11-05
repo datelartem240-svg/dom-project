@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n' 
 const { t } = useI18n();
 </script>
 <template>
@@ -58,16 +59,16 @@ const { t } = useI18n();
             <div
               class="items-center text-lg font-bold text-gray-500 dark:text-gray-300"
             >
-              {{ $t("pages.index.hero.subtitle") }}
+              {{ t("pages.index.hero.subtitle") }}
             </div>
 
 
 
             <div class="text-3xl font-bold dark:text-white">
-              {{ $t("pages.index.hero.title") }}
+              {{ t("pages.index.hero.title") }}
             </div>
             <div class="text-gray-600 dark:text-gray-400">
-              {{ $t("pages.index.hero.description") }}
+              {{ t("pages.index.hero.description") }}
             </div>
           </div>
         </div>
@@ -81,7 +82,7 @@ const { t } = useI18n();
     <footer
       class="dark:text-300 py-20 text-center text-sm text-gray-500 dark:text-gray-400"
     >
-      <p>© {{ new Date().getFullYear() }} - {{ $t("site.name") }}</p>
+      <p>© {{ new Date().getFullYear() }} - {{ t("site.name") }}</p>
     </footer>
   </div>
 </template>

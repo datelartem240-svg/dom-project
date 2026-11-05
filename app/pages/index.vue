@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { posts } from "../components/content_for_universe_of_courage/posts"
+import { useI18n } from 'vue-i18n'
 const { t } = useI18n();
 useHead({
-  title: t("pages.index.meta.title"),
+  title: computed(() => t("pages.index.meta.title")),
   meta: [{ name: "description", content: t("pages.index.meta.description") }],
 });
 useSeoMeta({
-  title: t("pages.index.meta.title"),
-  description: t("pages.index.meta.description"),
+  title: computed(() => t("pages.index.meta.title")),
+  description: computed(() => t("pages.index.meta.description")),
 });
 definePageMeta({
   layout: "default",
